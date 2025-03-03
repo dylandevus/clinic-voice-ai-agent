@@ -1,6 +1,7 @@
 {
     "trunk": {
       "name": "app3 inbound trunk",
-      "numbers": ["+15108008755"]
+      "numbers": ["+15108008755"],
+      "krisp_enabled": true
     }
   }

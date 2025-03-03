@@ -4,6 +4,7 @@ import json
 from unittest.mock import patch
 from utils import save_customer_info
 
+
 class TestSaveCustomerInfo(unittest.TestCase):
 
     def setUp(self):
@@ -34,10 +35,14 @@ class TestSaveCustomerInfo(unittest.TestCase):
 
     def test_save_customer_info_json_error(self):
         # Mock the json.dumps function to raise a JSONDecodeError
-        with patch("json.dumps", side_effect=json.JSONDecodeError("Mocked JSONDecodeError", "doc", 0)):
+        with patch(
+            "json.dumps",
+            side_effect=json.JSONDecodeError("Mocked JSONDecodeError", "doc", 0),
+        ):
             data = {"name": "John Doe", "email": "john.doe@example.com"}
             result = save_customer_info(data, self.test_filename)
             self.assertFalse(result)
+
 
 if __name__ == "__main__":
     unittest.main()

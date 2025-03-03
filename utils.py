@@ -4,9 +4,11 @@ import smtplib
 from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 import logging
+
 logger = logging.getLogger("voice-agent")
 
 from dotenv import load_dotenv
+
 load_dotenv()
 
 BREVO_SENDER_EMAIL = os.getenv("BREVO_SENDER_EMAIL")
