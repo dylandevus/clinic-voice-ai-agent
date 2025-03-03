@@ -5,6 +5,8 @@ AI assistant that helps collect patient's information over the phone, then store
 ## Requirements
 
 *   Python 3.12.x+
+*   LiveKit CLI
+*   API Keys in .env file
 
 ## Dev Setup
 
