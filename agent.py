@@ -97,7 +97,7 @@ class CustomerInfoFnc(llm.FunctionContext):
 
         subject = "Customer Info"
         html_content = format_customer_info_html(json_data)
-        send_email("catechlabus@gmail.com", "mrducat@gmail.com", subject, html_content)
+        send_email("catechlabus@gmail.com", os.getenv("ADMIN_EMAIL"), subject, html_content)
 
         confirmation_message = (
             f"Thank you, {name}. I have collected your information. "
