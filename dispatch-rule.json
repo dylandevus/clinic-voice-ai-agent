@@ -1,0 +1,13 @@
+{
+    "name": "app3 Dispatch Rule",
+    "rule": {
+      "dispatchRuleIndividual": {
+        "roomPrefix": "call"
+      }
+    },
+    "room_config": {
+        "agents": [{
+          "agent_name": "inbound-agent"
+        }]
+    }
+  }
