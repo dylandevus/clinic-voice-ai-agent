@@ -1,17 +1,17 @@
 # Clinic AI Phone Agent
 
-AI assistant that helps collect patient's information over the phone, then store and email it to admin.
+This application provides an AI-powered phone agent solution for healthcare clinics, automating patient intake and information collection. By leveraging Python and the LiveKit platform, this system streamlines the process of gathering essential patient data, reducing administrative burden and improving efficiency. The agent utilizes advanced language processing technologies, including Large Language Models (LLMs), Text-to-Speech (TTS), Speech-to-Text (STT), and Voice Activity Detection (VAD), to facilitate natural and seamless interactions with patients. 
 
 ## Requirements
 
 *   Python 3.12.x+
 *   LiveKit CLI
-*   API Keys in .env file
-*   Twilio phone number & SIP:
-    *   Purchase a phone number
-    *   Set up its SIP trunk, the `origination URI` looks similar likes this `sip:xxxxxx.sip.livekit.cloud;transport=tcp`
-    *   Edit phone number in `inbound-trunk.json`
-*   LiveKit CLI
+*   API Keys (as specified in the `.env` file)
+*   Twilio phone number and SIP configuration:
+    *   Acquire a Twilio phone number
+    *   Configure the associated SIP trunk with an `origination URI` similar to `sip:xxxxxx.sip.livekit.cloud;transport=tcp`
+    *   Update the `inbound-trunk.json` file with the designated phone number
+*   LiveKit CLI for SIP configuration:
     *   Dispatch rule: run: `lk sip dispatch create dispatch-rule.json`
     *   Inbound trunk: run: `lk sip inbound create inbound-trunk.json`
 
@@ -28,9 +28,9 @@ pip install -r requirements.txt
 python3 agent.py download-files
 ```
 
-Set up the environment by copying `.env.example` to `.env` and filling in the required values.
+Populate the `.env` file with the necessary API keys and configuration values.
 
-You can also do this automatically using the LiveKit CLI:
+Alternatively, utilize the LiveKit CLI for automated environment setup:
 
 ```
 lk app env
@@ -42,8 +42,14 @@ Run the agent:
 python3 agent.py dev
 ```
 
-Run unit tests:
+Execute unit tests:
 
 ```
 python3 test_utils.py
+```
+
+Build the Docker image:
+
+```
+docker build -t clinic-agent .
 ```
