@@ -7,6 +7,7 @@ AI assistant that helps collect patient's information over the phone, then store
 *   Python 3.12.x+
 *   LiveKit CLI
 *   API Keys in .env file
+*   Required services: Twilio phone number & SIP, LiveKit setups.
 
 ## Dev Setup
 
