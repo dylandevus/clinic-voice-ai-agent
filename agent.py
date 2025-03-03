@@ -47,7 +47,7 @@ class CustomerInfoFnc(llm.FunctionContext):
             str, llm.TypeInfo(description="The insurance payer's full name")
         ],
         insurance_plan_id: Annotated[
-            str, llm.TypeInfo(description="The insurance plan ID")
+            str, llm.TypeInfo(description="The insurance plan and ID")
         ],
         referral: Annotated[
             str, llm.TypeInfo(description="The referral (from which physician)")
